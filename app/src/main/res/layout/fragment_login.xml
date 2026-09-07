@@ -1,0 +1,14 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="24dp" android:gravity="center_vertical">
+<TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/login_title" android:textAppearance="?attr/textAppearanceHeadline4" />
+<TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:layout_marginBottom="32dp" android:text="@string/login_subtitle" android:textAppearance="?attr/textAppearanceBody1" />
+<com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/student_id">
+<com.google.android.material.textfield.TextInputEditText android:id="@+id/username" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="number" android:singleLine="true" android:autofillHints="username" />
+</com.google.android.material.textfield.TextInputLayout>
+<com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:hint="@string/password" app:endIconMode="password_toggle">
+<com.google.android.material.textfield.TextInputEditText android:id="@+id/password" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textPassword" android:singleLine="true" android:imeOptions="actionDone" android:saveEnabled="false" android:importantForAutofill="no" />
+</com.google.android.material.textfield.TextInputLayout>
+<TextView android:id="@+id/error" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:textColor="?attr/colorError" android:accessibilityLiveRegion="polite" android:visibility="gone" />
+<ProgressBar android:id="@+id/progress" android:layout_width="48dp" android:layout_height="48dp" android:layout_gravity="center" android:contentDescription="@string/loading" android:visibility="gone" />
+<com.google.android.material.button.MaterialButton android:id="@+id/login" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="56dp" android:layout_marginTop="16dp" android:text="@string/sign_in" />
+</LinearLayout></ScrollView>
