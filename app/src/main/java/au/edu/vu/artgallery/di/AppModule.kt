@@ -13,23 +13,36 @@ import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
 
+// A Hilt module that provides dependencies for the application.
 @Module
 @InstallIn(SingletonComponent::class)
 object AppModule {
-    @Provides @Singleton
+
+    // Provide one shared HTTP client with network time limits.
+    @Provides
+    @Singleton
     fun client(): OkHttpClient = OkHttpClient.Builder()
-        .connectTimeout(30, TimeUnit.SECONDS)
-        .readTimeout(90, TimeUnit.SECONDS)
-        .callTimeout(120, TimeUnit.SECONDS)
+        .connectTimeout(30, TimeUnit.SECONDS) // Time allowed to connect.
+        .readTimeout(90, TimeUnit.SECONDS)   // Time allowed for a read operation.
+        .callTimeout(120, TimeUnit.SECONDS)  // Time allowed for the entire request.
         .build()
 
-    @Provides @Singleton
+    // Create the API service using the HTTP client supplied by Hilt.
+    @Provides
+    @Singleton
     fun api(client: OkHttpClient): ArtApi = Retrofit.Builder()
         .baseUrl("https://nit3213apinew.onrender.com/")
         .client(client)
-        .addConverterFactory(GsonConverterFactory.create())
-        .build().create(ArtApi::class.java)
 
-    @Provides @Singleton
-    fun repository(implementation: NetworkArtRepository): ArtRepository = implementation
+        // Convert between JSON and the request/response models.
+        .addConverterFactory(GsonConverterFactory.create())
+        .build()
+        .create(ArtApi::class.java)
+
+    // Supply NetworkArtRepository whenever ArtRepository is requested.
+    @Provides
+    @Singleton
+    fun repository(
+        implementation: NetworkArtRepository
+    ): ArtRepository = implementation
 }
