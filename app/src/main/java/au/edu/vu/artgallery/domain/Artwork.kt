@@ -1,6 +1,5 @@
 package au.edu.vu.artgallery.domain
 
-/** Retains every API field; the assignment leaves topic-specific field names open. */
 data class Artwork(val fields: Map<String, String>) {
     val summary: Map<String, String> get() = fields.filterKeys { !it.equals("description", true) }
     val title: String get() = fields.entries.firstOrNull {
