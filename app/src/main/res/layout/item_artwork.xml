@@ -4,13 +4,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="16dp"
+    android:layout_marginBottom="14dp"
     android:layout_marginHorizontal="2dp"
     android:clickable="true"
     android:focusable="true"
     android:foreground="?attr/selectableItemBackground"
+    app:cardBackgroundColor="#F5F0FC"
     app:cardCornerRadius="16dp"
-    app:cardElevation="2dp">
+    app:cardElevation="2dp"
+    app:strokeColor="#DED3EF"
+    app:strokeWidth="1dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -24,7 +27,7 @@
             android:layout_height="wrap_content"
             android:textSize="21sp"
             android:textStyle="bold"
-            android:textColor="?attr/colorPrimary" />
+            android:textColor="#513B78" />
 
         <TextView
             android:id="@+id/summary"
@@ -32,6 +35,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:textSize="15sp"
+            android:textColor="#514B5C"
             android:lineSpacingExtra="5dp" />
 
         <TextView
@@ -41,7 +45,7 @@
             android:text="@string/view_details"
             android:textSize="14sp"
             android:textStyle="bold"
-            android:textColor="?attr/colorPrimary" />
+            android:textColor="#644594" />
 
     </LinearLayout>
 
