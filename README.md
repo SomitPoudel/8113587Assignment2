@@ -47,6 +47,3 @@ On macOS/Linux, use `./gradlew` instead. The test report is at `app/build/report
 
 Test files are included; passing results are not asserted by this README. Before submission, check login, navigation, sign-out, error handling and screen rotation. The GitHub Actions workflow also defines test, lint and build checks.
 
-## Acknowledgement
-
-Developed with AI assistance, using the NIT3213 lecture materials as a reference.
