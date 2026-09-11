@@ -27,6 +27,13 @@
                 android:orientation="vertical"
                 android:padding="24dp">
 
+                <ImageView
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:layout_marginBottom="16dp"
+                    android:src="@drawable/ic_gallery"
+                    android:importantForAccessibility="no" />
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -62,7 +69,9 @@
                     android:textColorHint="#514B5C"
                     app:hintTextColor="#644594"
                     app:boxBackgroundColor="#FFFFFF"
-                    app:boxStrokeColor="#644594">
+                    app:boxStrokeColor="#644594"
+                    app:startIconDrawable="@drawable/ic_person"
+                    app:startIconTint="#644594">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/username"
@@ -87,7 +96,9 @@
                     app:boxBackgroundColor="#FFFFFF"
                     app:boxStrokeColor="#644594"
                     app:endIconMode="password_toggle"
-                    app:endIconTint="#644594">
+                    app:endIconTint="#644594"
+                    app:startIconDrawable="@drawable/ic_lock"
+                    app:startIconTint="#644594">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/password"
