@@ -1,8 +1,8 @@
 <resources>
     <style name="Theme.ArtGallery" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <item name="colorPrimary">#6451A3</item>
-        <item name="colorPrimaryVariant">#49367E</item>
+        <item name="colorPrimary">#006D77</item>
+        <item name="colorPrimaryVariant">#004F56</item>
         <item name="colorOnPrimary">#FFFFFF</item>
-        <item name="colorSecondary">#82703C</item>
+        <item name="colorSecondary">#006D77</item>
     </style>
 </resources>

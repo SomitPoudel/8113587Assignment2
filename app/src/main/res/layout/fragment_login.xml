@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F6F7F9"
     android:fillViewport="true">
 
     <LinearLayout
@@ -15,10 +16,10 @@
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardBackgroundColor="#F5F0FC"
+            app:cardBackgroundColor="#FFFFFF"
             app:cardCornerRadius="20dp"
-            app:cardElevation="2dp"
-            app:strokeColor="#DED3EF"
+            app:cardElevation="0dp"
+            app:strokeColor="#DCE3E7"
             app:strokeWidth="1dp">
 
             <LinearLayout
@@ -40,7 +41,7 @@
                     android:text="@string/app_name"
                     android:textSize="16sp"
                     android:textStyle="bold"
-                    android:textColor="#644594"
+                    android:textColor="#006D77"
                     android:layout_marginBottom="16dp" />
 
                 <TextView
@@ -49,7 +50,7 @@
                     android:text="@string/login_title"
                     android:textSize="28sp"
                     android:textStyle="bold"
-                    android:textColor="#513B78"
+                    android:textColor="#172B35"
                     android:layout_marginBottom="12dp" />
 
                 <TextView
@@ -57,7 +58,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/login_subtitle"
                     android:textSize="15sp"
-                    android:textColor="#514B5C"
+                    android:textColor="#52616B"
                     android:lineSpacingExtra="3dp"
                     android:layout_marginBottom="24dp" />
 
@@ -66,12 +67,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/student_id"
-                    android:textColorHint="#514B5C"
-                    app:hintTextColor="#644594"
-                    app:boxBackgroundColor="#FFFFFF"
-                    app:boxStrokeColor="#644594"
                     app:startIconDrawable="@drawable/ic_person"
-                    app:startIconTint="#644594">
+                    android:textColorHint="#52616B"
+                    app:hintTextColor="#006D77"
+                    app:boxBackgroundColor="#FFFFFF"
+                    app:boxStrokeColor="#006D77"
+                    app:startIconTint="#52616B">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/username"
@@ -91,14 +92,14 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:hint="@string/password"
-                    android:textColorHint="#514B5C"
-                    app:hintTextColor="#644594"
-                    app:boxBackgroundColor="#FFFFFF"
-                    app:boxStrokeColor="#644594"
-                    app:endIconMode="password_toggle"
-                    app:endIconTint="#644594"
                     app:startIconDrawable="@drawable/ic_lock"
-                    app:startIconTint="#644594">
+                    android:textColorHint="#52616B"
+                    app:hintTextColor="#006D77"
+                    app:boxBackgroundColor="#FFFFFF"
+                    app:boxStrokeColor="#006D77"
+                    app:startIconTint="#52616B"
+                    app:endIconMode="password_toggle"
+                    app:endIconTint="#52616B">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/password"
@@ -128,7 +129,7 @@
                     android:layout_height="40dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="16dp"
-                    android:indeterminateTint="#644594"
+                    android:indeterminateTint="#006D77"
                     android:contentDescription="@string/loading"
                     android:visibility="gone" />
 
@@ -142,7 +143,7 @@
                     android:textSize="16sp"
                     android:textAllCaps="false"
                     android:textColor="#FFFFFF"
-                    app:backgroundTint="#644594"
+                    app:backgroundTint="#006D77"
                     app:cornerRadius="12dp" />
 
             </LinearLayout>
